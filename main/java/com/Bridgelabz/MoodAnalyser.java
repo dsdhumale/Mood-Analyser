@@ -18,16 +18,15 @@ public class MoodAnalyser {
     public static void main(String[] args) {
         System.out.println("Welcome to Mood Analyser Problem");
     }
-
     //Method that return mood
-    public String analysisMood() {
+    public String analysisMood() throws MoodAnalyzerException {
         try {
             if (message.contains("sad"))
                 return "sad";
             else
                 return "Happy";
         } catch(NullPointerException e) {
-            return "Happy";
+            throw new MoodAnalyzerException("Please Enter proper message");
         }
     }
 }
