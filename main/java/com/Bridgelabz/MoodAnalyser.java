@@ -1,31 +1,33 @@
 package com.Bridgelabz;
 
 public class MoodAnalyser {
-        //Declare variable
-        String mood;
-        String message;
+    //Declare variable
+    String mood;
+    String message;
 
-        //Default constructor
+    //Default constructor
     public MoodAnalyser(){
 
-        }
-        //Parameterised constructor
+    }
+
+    //Parameterised constructor
     public MoodAnalyser(String message){
-            this.message = message;
-        }
+        this.message = message;
+    }
 
-        public static void main(String[] args) {
-            System.out.println("Welcome to Mood Analyser Problem");
-        }
+    public static void main(String[] args) {
+        System.out.println("Welcome to Mood Analyser Problem");
+    }
 
-        //Method that return mood
-        public String analysisMood(String message) {
-            if (message.equalsIgnoreCase("I am in sad Mood")) {
-                mood = "SAD";
-            }
-            else {
-                mood = "HAPPY";
-            }
-            return mood;
+    //Method that return mood
+    public String analysisMood() {
+        try {
+            if (message.contains("sad"))
+                return "sad";
+            else
+                return "Happy";
+        } catch(NullPointerException e) {
+            return "Happy";
         }
+    }
 }
