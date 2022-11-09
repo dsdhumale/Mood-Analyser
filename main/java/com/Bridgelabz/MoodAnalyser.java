@@ -6,8 +6,8 @@ public class MoodAnalyser {
         System.out.println("Welcome to Mood Analyser Problem");
     }
     public String analysisMood(String message) {
-        if (message.equalsIgnoreCase("I am in sad Mood"))
-            mood =  "SAD";
+        if (message.equalsIgnoreCase("I am in any Mood"))
+            mood =  "HAPPY";
         return mood;
     }
 }
